@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <title>NY Times Search</title>
 </head>
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">NY Times Search</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="lead">Search for the articles you want.</p>
   </div>
 </div>
 <body>
@@ -54,6 +53,19 @@
     </div>
   </form>
 
+
+<button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+   <script> $("#submitButton").on("click", function(){
+     
+   });     
+     </script>
+
+<button type="reset" class="btn btn-primary" id="resetButton">Reset</button>
+  <script> $("#resetButton").on("click", function () {
+
+      });     
+  </script>
   
 </body>
+<script src="javascript.js"></script>
 </html>
