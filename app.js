@@ -11,10 +11,10 @@ var ourUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=8
 // 'end_date': "18650410"
 // });
 
-$(".button").on("click", function(){
-    text = $("#search").val().trim();
+$(".btn").on("click", function(){
+    text = $("#Search").val().trim();
     numRecords = $("#numRecords").val().trim();
-    startYear = $("#startYear").val().trim();
+    startYear = $("#startYear").val().trim()
     endYear = $("#endYear").val().trim();
     // var text = "1";
     // numRecords = "2";
@@ -24,8 +24,13 @@ $(".button").on("click", function(){
     ourUrl += `&q=${text}&fq=${numRecords}&begin_date=${startYear}&end_date=${endYear}`
     console.log(ourUrl);
 
-    // $.ajax({
-    //     // url: ourUrl + "&q=" + text + "&fq=" + numRecords + "&begin_date=" + startYear + "&end_date=" + endYear
-    // })
+    $.ajax({
+        url: ourUrl,
+        method: "Get",
+    }).then(function(response){
+        console.log(response)
+    })
 
 })
+
+// url: ourUrl + "&q=" + text + "&fq=" + numRecords + "&begin_date=" + startYear + "&end_date=" + endYear
